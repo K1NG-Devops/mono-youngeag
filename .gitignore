@@ -1,0 +1,5 @@
+**/node_modules
+angular-app/dist
+react-app/dist
+.vercel
+.DS_Store

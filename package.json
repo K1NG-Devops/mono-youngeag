@@ -1,0 +1,7 @@
+{
+    "name": "youngeagles-monorepo",
+    "private": true,
+    "scripts": {
+      "vercel-build": "npm --prefix angular-app run build && npm --prefix react-app run build"
+    }
+  }
