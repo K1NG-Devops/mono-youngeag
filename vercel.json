@@ -13,13 +13,16 @@
       }
     ],
     "routes": [
-      {
-        "src": "/react(?:/(.*))?",
-        "dest": "react-app/$1"
-      },
-      {
-        "src": "/*",
-        "dest": "angular-app/$1"
-      }
-    ]
-  }
+    { "src": "/react(?:/(.*))?", "dest": "/react-app/$1" },
+
+    {
+      "src": "/(.*)",
+      "dest": "/angular-app/browser/$1",
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/angular-app/browser/index.html"
+    }
+  ]
+}
