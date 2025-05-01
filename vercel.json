@@ -1,6 +1,7 @@
 {
     "version": 2,
     "builds": [
+
       {
        "src": "angular-app/package.json",
        "use": "@vercel/static-build",
@@ -13,16 +14,13 @@
       }
     ],
     "routes": [
-    { "src": "/react(?:/(.*))?", "dest": "/react-app/$1" },
-
-    {
-      "src": "/(.*)",
-      "dest": "/angular-app/browser/$1",
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/angular-app/browser/index.html"
-    }
-  ]
-}
+      {
+        "src": "/react(?:/(.*))?",
+        "dest": "react-app/$1"
+      },
+      {
+        "src": "/*",
+        "dest": "angular-app/$1"
+      }
+    ]
+  }
