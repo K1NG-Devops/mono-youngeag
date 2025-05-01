@@ -2,9 +2,9 @@
     "version": 2,
     "builds": [
       {
-        "src": "angular-app/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "dist/angular-app" }
+       "src": "angular-app/package.json",
+       "use": "@vercel/static-build",
+       "config": { "distDir": "dist/angular-app/browser" }
       },
       {
         "src": "react-app/package.json",
